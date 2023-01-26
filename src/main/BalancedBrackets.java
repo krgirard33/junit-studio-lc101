@@ -29,6 +29,10 @@ public class BalancedBrackets {
             } else if (ch == ']') {
                 brackets--;
             }
+            // If you have encountered more closers than openers it will not balance
+            if(brackets<0) {
+                return false;
+            }
         }
         return brackets == 0;
     }
