@@ -1,17 +1,20 @@
 package main;
 
+import java.util.Arrays;
+
 public class BonusBinarySearch {
 
     /**
      * A binary search implementation for integer arrays.
-     *
+     * <p>
      * Info about binary search: https://www.geeksforgeeks.org/binary-search/
      *
      * @param sortedNumbers - must be sorted from least to greatest
-     * @param n - number to search for
+     * @param n             - number to search for
      * @return index of search item if it's found, -1 if not found
      */
     public static int binarySearch(int[] sortedNumbers, int n) {
+        Arrays.sort(sortedNumbers);
         int right = sortedNumbers.length - 1;
         int left = 0;
         while (right >= left) {
